@@ -10,7 +10,9 @@ GPL-3.0
 
 if you have git installed you can do git clone and frequently git pull to receive updates
 
+```
 git clone git@github.com:rrfaria/eobot-trader.git
+```
 
 go to chrome://extensions/
 enable developer mode

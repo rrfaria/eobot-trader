@@ -1,10 +1,22 @@
 ## Eobot Trader
 
-This tools helps you to know more information about your coins and helps you to trade coins to another easly
+This tools(chrome Extension) helps you to know more information about your coins and helps you to trade coins to another easly
 
 ## License
 
 GPL-3.0
+
+## How to install
+
+if you have git installed you can do git clone and frequently git pull to receive updates
+
+git clone git@github.com:rrfaria/eobot-trader.git
+
+go to chrome://extensions/
+enable developer mode
+then click in load extended extension and select the extension folder where you have cloned
+
+after that it will show new layout
 
 ## Send Suggestion Or fixes
 

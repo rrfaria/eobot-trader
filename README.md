@@ -27,7 +27,7 @@ first of all
 to see the transations you need to do transitions using the yellow button "transation" on exchange page instead of use buy button
 transation will store your information and then buy the coin clicking automaticaly on buy button to you
 
-The Minimum button will set mini
+The Minimum button will set minimum amount to do a transation
 
 ## Send Suggestion Or fixes
 

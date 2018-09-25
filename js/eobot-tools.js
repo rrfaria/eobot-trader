@@ -17,7 +17,7 @@ const Eobot = {
 
 	exchange: () => {
 		$('#ctl00_ContentPlaceHolder1_btnConvert').after("<button id='ext-transation'>Transation</button>");
-		$('#ext-transation').after("<button id='ext-mintransation'>Minumuim 0.0001 USD</button>");
+		$('#ext-transation').after("<button id='ext-mintransation'>Minimum 0.0001 USD</button>");
 		$('#ext-transation').click(function(e) {
 			e.preventDefault();
 			Eobot.onTransation();

@@ -18,6 +18,17 @@ then click in load extended extension and select the extension folder where you 
 
 after that it will show new layout
 
+## How Extension Works
+
+It stores your information on localstorage if you clean browser cache you will lose the informations
+
+first of all
+
+to see the transations you need to do transitions using the yellow button "transation" on exchange page instead of use buy button
+transation will store your information and then buy the coin clicking automaticaly on buy button to you
+
+The Minimum button will set mini
+
 ## Send Suggestion Or fixes
 
 send in suggestion/fixes to the project on issues

@@ -1,0 +1,285 @@
+#aspnetForm {
+  display: flex !important;
+}
+
+#aspnetForm>table:nth-child(15) {
+  display: none !important;
+}
+
+/* menu and header */
+#ddmenu ul {
+  flex-direction: column !important;
+  max-width: 210px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+}
+
+#header {
+  width: inherit !important;
+  margin-left: -150px;
+  transition: all 0.33s ease;
+}
+
+#header:hover,
+#header.actived {
+  margin-left: 0;
+}
+
+#ddmenu .dropdown {
+  display: block !important;
+  max-height: 0;
+  opacity: 0;
+  transition: all ease 0.33s;
+}
+
+#ddmenu li.over .dropdown {
+  max-height: 230px;
+  opacity: 1;
+}
+
+.nav {
+  padding: 0 !important;
+}
+
+#ddmenu li.over {
+  background-color: #1c7dce !important;
+}
+
+#ddmenu .dropdown {
+  overflow: hidden;
+  width: 100% !important;
+  border: none !important;
+  background-color: #1c7dce !important;
+  position: relative !important;
+}
+
+#ddmenu .dd-inner {
+  background-color: #1c7dce !important;
+}
+
+#ddmenu .dropdown a,
+#ddmenu li a,
+#ddmenu li a:hover,
+#ddmenu li a:link {
+  color: #a2d5ff !important;
+  display: flex !important;
+  flex-flow: row-reverse wrap !important;
+}
+
+#ddmenu .dropdown a:focus,
+#ddmenu .dropdown a:hover {
+  text-decoration: none !important;
+  color: #fff !important;
+  width: 100% !important;
+}
+
+#ddmenu li a:hover {
+  text-decoration: none !important;
+}
+
+#ddmenu li.single.over a {
+  background: none;
+}
+
+img[src="/logo.png"] {
+  width: 130px;
+  height: 25px;
+  margin: 15px;
+}
+
+#ctl00_tblTest~table {
+  display: none;
+}
+
+#ext-mintransation,
+#ext-transation {
+  margin: 10px 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana,
+    "lucida sans unicode", tahoma, sans-serif;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+#ext-transation {
+  color: #777;
+  background: #ffe486;
+}
+
+#ext-mintransation {
+  color: #fff;
+  background: #1f8de6;
+}
+
+.btn {
+  background: transparent;
+  padding: 15px;
+  width: 100%;
+}
+
+/* coins item */
+.coins {
+  display: flex;
+  min-width: 550px;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  padding: 10px;
+  background: #ebedf2;
+  transition: all 0.33s ease;
+}
+
+.coins--close {
+  max-width: 0;
+  min-width: 0;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.coins__transation,
+.coins__profit {
+  display: flex;
+}
+
+.coin {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  align-items: center;
+  position: relative;
+}
+
+.coin--from,
+.coin--to {
+  padding-left: 0;
+}
+
+.coin--buyback,
+.coin--buydolar {
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+.coin--buyback:before,
+.coin--buydolar:before {
+  content: "";
+  width: 1px;
+  background: #e6e6e6;
+  margin-top: 20px;
+  height: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.coin__img {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.coin__icon {
+  width: 35px;
+}
+
+.coins__item {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 10px 15px;
+  border-radius: 5px;
+  min-width: 520px;
+  max-height: 150px;
+  opacity: 1;
+  background: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+}
+
+
+.coins__item--fadeout {
+  max-height: 0px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all 0.33s ease;
+  box-shadow: none;
+}
+
+.coin__title {
+  font-weight: 800;
+  font-size: 14px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.coin__to {
+  font-size: 10px;
+}
+
+.prices {
+  color: #9aa9ba;
+  display: flex;
+}
+
+.prices__icon {
+  padding-top: 4px;
+  padding-right: 5px;
+}
+
+.percents {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.percents--up {
+  color: #00c9a4;
+}
+
+.percents--down {
+  color: #fc2661;
+}
+
+.hidecoin {
+  position: absolute;
+  right: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+
+
+/* loading */
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+.loader svg path,
+.loader svg rect {
+  fill: #ff6700;
+}
+
+
+.tradingview-widget-container {
+  width: 0 !important;
+  min-width: 0;
+  transition: all ease 0.33s;
+  overflow: hidden;
+}
+
+.tradingview-widget-container--open {
+  width: 300px !important;
+  min-width: 300px;
+}

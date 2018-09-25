@@ -1,0 +1,60 @@
+{
+  "manifest_version": 2,
+  "name": "EOBOT-TRADER",
+  "license": "GPL-3.0",
+  "description": "Do trading with your coins on Eobot",
+  "version": "1.0",
+  "permissions": [
+    "unlimited_storage",
+    "notifications",
+    "clipboardRead",
+    "clipboardWrite",
+    "contextMenus",
+    "cookies",
+    "storage",
+    "idle",
+    "webRequest",
+    "webNavigation",
+    "tabs",
+    "activeTab",
+    "<all_urls>",
+    "*://eobot.com/*"
+  ],
+  "web_accessible_resources": [
+    "icon/icon-128.png",
+    "tools/trendingview.html",
+    "svg/btc.svg",
+    "svg/ltc.svg",
+    "svg/eth.svg",
+    "svg/etc.svg",
+    "svg/bch.svg",
+    "svg/doge.svg",
+    "svg/xrp.svg",
+    "svg/dash.svg",
+    "svg/gnt.svg",
+    "svg/ada.svg",
+    "svg/cure.svg",
+    "svg/xem.svg",
+    "svg/xmr.svg",
+    "svg/zec.svg",
+    "svg/fct.svg",
+    "svg/bcn.svg",
+    "svg/steem.svg",
+    "svg/lsk.svg",
+    "svg/eos.svg",
+    "svg/usd.svg"
+  ],
+  "icons": {
+    "16": "icon/icon-16.png",
+    "34": "icon/icon-34.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.eobot.com/*"],
+    "js": ["js/jquery-3.2.1.min.js", "js/eobot-tools.js"],
+    "css": ["css/eobot.css"],
+    "run_at": "document_end",
+    "all_frames": false
+  }]
+}

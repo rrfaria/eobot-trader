@@ -31,6 +31,8 @@ transation will store your information and then buy the coin clicking automatica
 
 The Minimum button will set minimum amount to do a transation
 
+![trading history](doc/tradehistory.jpg)
+
 ## Send Suggestion Or fixes
 
 send in suggestion/fixes to the project on issues

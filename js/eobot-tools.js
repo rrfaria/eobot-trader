@@ -4,15 +4,17 @@ const Eobot = {
 	selectedIndex : -1,
 	minTransPrice: 0.00011,
 
-	init:() => {
+	init:async () => {
 		if (localStorage.eobotStore) {
 			Eobot.eobotArr = JSON.parse(localStorage.eobotStore);
 		}
 		Eobot.exchange();
 		Eobot.fontAwesome();
 		Eobot.tradingView();
-		Eobot.tradingHistory();
-
+		await Eobot.tradingHistory();
+		Eobot.tradeHistoryActions();
+		Eobot.addMenus();
+		Eobot.divStates();
 	},
 
 	exchange: () => {
@@ -29,9 +31,7 @@ const Eobot = {
 	},
 
 	tradingHistory: async () => {
-		$('#ddmenu').before('');
-		$('#ddmenu ul li.single').after('<li id="ext-openrealtime"><span class="top-heading"><i class="fas fa-chart-line"></i> Realtime Price</span></li>');
-		$('#ddmenu ul li.single').after('<li id="ext-opentrading"><span class="top-heading"><i class="fab fa-bitcoin"></i> Trading History</span></li>');
+		// coin
 		const coins = await Eobot.mountCoins();
 		const coindiv = `
 		<div class="coins coins--close">
@@ -43,15 +43,10 @@ const Eobot = {
 		}else {
 			$('#header').addClass('actived');
 		}
+		return;
+	},
 
-		$(document).on('click','#ext-opentrading', function() {
-			$('.coins').toggleClass('coins--close');
-		});
-
-		$(document).on('click','#ext-openrealtime', function() {
-			$('.tradingview-widget-container').toggleClass('tradingview-widget-container--open');
-		})
-
+	tradeHistoryActions: () => {
 		$(document).on('click','.hidecoin', function() {
 			const $coin = $(this).parent();
 			const id = $coin.data('id');
@@ -62,8 +57,23 @@ const Eobot = {
 				}
 			});
 			localStorage.eobotStore = JSON.stringify(Eobot.eobotArr);
-		})
+		});
+	},
 
+	addMenus: () => {
+		//Menus
+		$('#ddmenu ul li.single').after('<li id="ext-openrealtime"><span class="top-heading"><i class="fas fa-chart-line"></i> Realtime Price</span></li>');
+		$('#ddmenu ul li.single').after('<li id="ext-opentrading"><span class="top-heading"><i class="fab fa-bitcoin"></i> Trading History</span></li>');
+
+		$(document).on('click','#ext-opentrading', function() {
+			const tradingClass = $('.coins').toggleClass('coins--close');
+			localStorage.setItem('eobot-trader-tradingHistory', tradingClass[0].className);
+		});
+
+		$(document).on('click','#ext-openrealtime', function() {
+			const realtimeClass = $('.tradingview-widget-container').toggleClass('tradingview-widget-container--open');
+			localStorage.setItem('eobot-trader-realtimeClass', realtimeClass[0].className);
+		});
 	},
 
 	mountCoins: async () => {
@@ -255,8 +265,12 @@ const Eobot = {
 
 	},
 
-	bindActions: () => {
+	divStates: () => {
+		const tradeHistory = localStorage.getItem('eobot-trader-tradingHistory');
+		const RealTime = localStorage.getItem('eobot-trader-realtimeClass');
 
+		$('.coins')[0].className = tradeHistory;
+		$('.tradingview-widget-container')[0].className = RealTime;
 	},
 	/**
 	 * Return coin price filtering by coins

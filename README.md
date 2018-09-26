@@ -59,12 +59,12 @@ To Code:
 
 ### 🤘 ChangeLog 🤘
 
-### 1.0.1 🐞 - FIX
+#### 1.0.1 🐞 - FIX
 
 - Added Change log
 - Div state(trading history and realtime) - Div stays open even if reload page
 
-### 1.0 🚀 - Launch
+#### 1.0 🚀 - Launch
 
 - Trading history
 - Realtime charts

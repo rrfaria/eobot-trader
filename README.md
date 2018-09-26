@@ -38,9 +38,7 @@ Doge wallet:
 
 DK6d8maJtwQSBpMVjicre6e9CJ1hk7gntM
 
-### 💪 TODO
-
----
+### 💪 TODO 🎖
 
 Plans to New features:
 
@@ -60,8 +58,6 @@ To Code:
 - convert to some framework ( vue.js/ React.js)
 
 ### 🤘 ChangeLog 🤘
-
----
 
 ### 1.0.1 🐞 - FIX
 

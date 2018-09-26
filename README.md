@@ -45,3 +45,34 @@ If you wanna help this project you can donate some doges to development cost.
 Doge wallet:
 
 DK6d8maJtwQSBpMVjicre6e9CJ1hk7gntM
+
+# 💪 TODO
+
+Plans to New features:
+
+To APP:
+
+- Add Price to Sell Coin
+- Auto trade
+- Settings Panel
+- Multi Language
+- Difficulty Charts to help you to know coin is faster to mine.
+
+To Code:
+
+- Add code lint
+- Add unit tests
+- Add BBD
+- convert to some framework ( vue.js/ React.js)
+
+# 🤘 ChangeLog 🤘
+
+### 1.0.1 🐞 - FIX
+
+- Added Change log
+- Div state(trading history and realtime) - Div stays open even if reload page
+
+### 1.0 🚀 - Launch
+
+- Trading history
+- Realtime charts

@@ -67,7 +67,11 @@ To Code:
 
 # 🤘 ChangeLog 🤘
 
-### 1.0.1 🐞 - FIX
+#### 1.1 🏆🙌 - FEATURE
+
+- Added Sell price indicator
+
+#### 1.0.1 🐞 - FIX
 
 - Added Change log
 - Div state(trading history and realtime) - Div stays open even if reload page

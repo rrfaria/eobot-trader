@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "EOBOT-TRADER",
   "description": "Do trading with your coins on Eobot",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "default_locale": "en",
   "browser_action": {
     "default_icon": "icon/icon-16.png",

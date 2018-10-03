@@ -59,6 +59,10 @@ To Code:
 
 ### 🤘 ChangeLog 🤘
 
+#### 1.1 🏆🙌 - FEATURE
+
+- Added Sell price indicator
+
 #### 1.0.1 🐞 - FIX
 
 - Added Change log
